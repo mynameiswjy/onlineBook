@@ -50,5 +50,13 @@
 }
 
 .stat_date {
-    margin-top: 30px;
+    /*margin-top: 30px;*/
+}
+.month {
+    text-align: left;
+    margin-bottom: 8px;
+    margin-left: 20px;
+}
+.ant-tabs-tab {
+    width: 300px;
 }

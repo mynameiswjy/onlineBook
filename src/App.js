@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PriceList from './components/PriceList'
 import Header from './components/header'
+import Tab from './components/viewTab'
 import './App.css';
 
 const items = [
@@ -42,6 +43,7 @@ class App extends React.Component {
 					data='null'
 					handleChange={(dateString) => this.handleDate(dateString)}
 				/>
+				<Tab/>
 				<PriceList
 					items={items}
 					onModifyItem={this.onModifyItem}
