@@ -57,6 +57,25 @@
     margin-bottom: 8px;
     margin-left: 20px;
 }
+.ant-tabs-nav {
+    width: 66.7%;
+}
+.ant-tabs-nav-animated {
+    width: 66.7%;
+}
+.ant-tabs-tab-active {
+    width: 49%;
+}
 .ant-tabs-tab {
-    width: 300px;
+    width: 49%;
+}
+.create_new {
+    width: 66.7%;
+    height: 44px;
+    border-radius: 10px;
+    background-color: #6752F1;
+    margin: 0 auto;
+    color: #fff;
+    line-height: 44px;
+    cursor: pointer;
 }

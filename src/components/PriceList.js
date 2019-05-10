@@ -3,6 +3,27 @@ import { Button, Row, Col, Icon } from 'antd';
 import PropTypes from 'prop-types'
 import './index.css'
 
+const categories = {
+	eat: {
+		id: '1',
+		name: '吃饭',
+		type: 0,
+		iconName: "taobao-circle"
+	},
+	travel: {
+		id: '2',
+		name: '旅游',
+		type: 0,
+		iconName: 'coffee'
+	},
+	payoff: {
+		id: 3,
+		name: '发工资',
+		type: 1,
+		iconName: 'twitter'
+	}
+}
+
 const PriceList = ({items, onModifyItem, onDeleteItem}) => {
 	return (
 		<ul className="">

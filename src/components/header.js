@@ -18,7 +18,7 @@ const Header = ({data, handleChange}) => {
 					<Row className="stat_date">
 						<Col span={12}>
 							<MonthPicker className="head_date" onChange={(date, dateString) => handleChange(dateString)}
-													 placeholder="Select month"/>
+													 placeholder="2018年5月"/>
 						</Col>
 						<Col span={6}>
 							收入: 1000
