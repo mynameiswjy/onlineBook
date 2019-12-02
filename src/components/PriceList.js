@@ -4,27 +4,37 @@ import PropTypes from 'prop-types'
 import './index.css'
 
 const categories = {
-	eat: {
+	'0' : {
 		id: '1',
 		name: '吃饭',
 		type: 0,
 		iconName: "taobao-circle"
 	},
-	travel: {
+	'1' : {
 		id: '2',
 		name: '旅游',
 		type: 0,
 		iconName: 'coffee'
 	},
-	payoff: {
+	'2' : {
 		id: 3,
 		name: '发工资',
+		type: 1,
+		iconName: 'twitter'
+	},
+	'3' : {
+		id: 4,
+		name: '看电影',
 		type: 1,
 		iconName: 'twitter'
 	}
 }
 
 const PriceList = ({items, onModifyItem, onDeleteItem}) => {
+	items.map(item => {
+		item.categorie = categories[item.cid]
+		return item
+	})
 	return (
 		<ul className="">
 			{
@@ -36,12 +46,12 @@ const PriceList = ({items, onModifyItem, onDeleteItem}) => {
 							<Col span={3} className="price_top">{item.price}元</Col>
 							<Col span={4} className="price_bott">{item.date}</Col>
 							<Col span={1} className="price_top">
-								<Button type="primary" onClick={() => onModifyItem(item)}>
+								<Button type="primary" onClick={() => onModifyItem(index)}>
 									<Icon type="edit" />
 								</Button>
 							</Col>
 							<Col span={1} className="price_bott price_end">
-								<Button type="danger" onClick={() => onDeleteItem(item)}>
+								<Button type="danger" onClick={() => onDeleteItem(index)}>
 									<Icon type="delete" theme="filled" />
 								</Button>
 							</Col>
